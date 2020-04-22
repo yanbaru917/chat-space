@@ -1,0 +1,31 @@
+.main-header
+  .main-header__leftbox
+    %h2.main-header__leftbox__current-name
+      test
+    %ul.main-header__leftbox__menber-list
+      Member:
+      %li.main-header__leftbox__menber-list__member
+        test1,test2
+  = link_to "#" do
+    .main-header__leftbox__edit-btn
+      Edit
+
+.messages
+  .message
+    .message__upper-info
+      %p.message__upper-info__talker
+        田中
+      %p.message__upper-info__date
+        2020.12.12
+    .message__text
+      嗚呼
+
+.form
+  %form.new_message
+    .input-box
+      %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+      %label{class: "input-box__image"}
+        = icon('fas', 'image')
+        %input{type: "file", class: "input-box__image__file"}
+    .submit-btn
+      %input{type: "submit", class: "submit-btn__btn", value: "Send"}
