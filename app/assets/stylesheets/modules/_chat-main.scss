@@ -1,0 +1,115 @@
+.chat-main{
+  width: calc(100vw - 300px);
+  float: left;
+}
+
+.main-header{
+  border-bottom: solid #eeeeee;
+  height: 100px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  overflow: scroll;
+    a{
+      text-decoration: none;
+    }
+
+  .main-header__leftbox{
+    margin-top: 35px;
+    &__current-name{
+      color: #333333;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    &__menber-list{
+      color: #999999;
+      display: flex;
+      font-size: 12px;
+    }
+  }
+      
+  .main-header__leftbox__edit-btn{
+    font-size: 16px;
+    color: $aqua;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: solid 1px $aqua;
+    margin-top: 30px;
+    padding: 0 20px;
+    position: absolute;
+    right: 40px;
+  }
+}
+
+.messages{
+  background-color: #fafafa;
+  height: calc(100vh - 190px);
+  padding: 46px 40px;
+  .message{
+    padding-bottom: 46px;
+    &__upper-info{
+      display: flex;
+      margin-bottom: 12px;
+      &__talker{
+        font-size: 16px;
+        color: #333333;
+        font-weight: bold;
+      }
+      &__date{
+        font-size:12px;
+        color: #999999;
+        margin-left: 10px;
+      }
+    }
+    &__text{
+      font-size: 14px;
+      color: #434A54;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.form{
+  background-color: #d2d2d2;
+  height: 90px;
+  padding:  20px 40px;
+  
+  form {
+    display: flex;
+    .input-box{
+      display: flex;
+      width: 100%;
+      position: relative;
+      &__text {
+        height: 50px;
+        width: 100%;
+        color: #434a54;
+        border-style: none;
+        padding: 0 40px 0 10px;
+      }
+      &__image {
+        font-size: 1.3rem;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        &__file {
+          display: none;
+        }
+      }
+    }
+    .submit-btn {
+      text-align: center;
+      &__btn {
+        background-color: $aqua;
+        color: $white;
+        cursor: pointer;
+        height: 50px;
+        width: 100px;
+        margin-left: 15px;
+      }
+    }
+  }
+}
