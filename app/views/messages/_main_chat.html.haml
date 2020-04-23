@@ -11,21 +11,14 @@
       Edit
 
 .messages
-  .message
-    .message__upper-info
-      %p.message__upper-info__talker
-        田中
-      %p.message__upper-info__date
-        2020.12.12
-    .message__text
-      嗚呼
+  = render partial: 'message', collection: @messages
 
 .form
-  %form.new_message
+  = form_for [@group, @message] do |f|
     .input-box
-      %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-      %label{class: "input-box__image"}
-        = icon('fas', 'image')
-        %input{type: "file", class: "input-box__image__file"}
+      = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+      = f.label :image, class: 'input-box__image' do
+        = icon('fas', 'image', class: 'icon')
+        = f.file_field :image, class: 'input-box__image__file'
     .submit-btn
-      %input{type: "submit", class: "submit-btn__btn", value: "Send"}
+      = f.submit 'Send', class: 'submit-btn__btn'
