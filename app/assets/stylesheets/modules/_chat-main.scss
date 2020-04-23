@@ -30,11 +30,11 @@
       
   .main-header__leftbox__edit-btn{
     font-size: 16px;
-    color: $aqua;
+    color: $light_blue;
     height: 40px;
     text-align: center;
     line-height: 40px;
-    border: solid 1px $aqua;
+    border: solid 1px $light_blue;
     margin-top: 30px;
     padding: 0 20px;
     position: absolute;
@@ -103,7 +103,7 @@
     .submit-btn {
       text-align: center;
       &__btn {
-        background-color: $aqua;
+        background-color: $light_blue;
         color: $white;
         cursor: pointer;
         height: 50px;
